@@ -31,7 +31,7 @@ export function CompanyOrigin() {
         <Container className="relative">
           <Reveal>
             <p className="eyebrow">{origin.questionEyebrow}</p>
-            <p className="company-question-statement display mt-8 max-w-[22ch]">{origin.question}</p>
+            <h2 className="company-question-statement display mt-8 max-w-[22ch]">{origin.question}</h2>
           </Reveal>
         </Container>
       </section>
@@ -43,12 +43,12 @@ export function CompanyScience() {
   const { science } = company;
 
   return (
-    <section id="the-science" className="section scroll-mt-[var(--header-h)]">
+    <section id="the-science" className="company-beat scroll-mt-[var(--header-h)]">
       <Container>
         <Reveal>
           <p className="eyebrow">{science.eyebrow}</p>
           <h2 className="h1 mt-5 max-w-[18ch]">{science.headline}</h2>
-          <div className="mt-8 max-w-[42rem] space-y-5 text-[var(--text-secondary)]">
+          <div className="mt-8 max-w-[42rem] space-y-5 text-[17px] leading-8 text-[var(--text-secondary)]">
             {science.copy.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -93,17 +93,37 @@ export function CompanyDigital() {
   const { digital } = company;
 
   return (
-    <section id="digital-immune-system" className="section scroll-mt-[var(--header-h)]">
+    <section id="building-the-system" className="company-beat scroll-mt-[var(--header-h)]">
       <Container>
+        <div className="company-rule" aria-hidden="true" />
         <Reveal>
           <p className="eyebrow">{digital.eyebrow}</p>
-          <h2 className="h1 mt-5 max-w-[18ch]">{digital.headline}</h2>
-          <p className="lede mt-6">{digital.copy}</p>
+          <h2 className="h1 mt-5 max-w-[20ch]">{digital.headline}</h2>
+          <p className="mt-8 max-w-[42rem] text-[17px] leading-8 text-[var(--text-secondary)]">{digital.copy}</p>
         </Reveal>
 
-        <Reveal className="mt-14 max-w-4xl border-t border-[var(--accent)] pt-8">
-          <p className="display max-w-[20ch] text-[clamp(1.75rem,3.4vw,3rem)]">{digital.supporting}</p>
-        </Reveal>
+        <div className="company-evidence mt-12 max-w-[42rem]">
+          {digital.references.map((reference) => (
+            <a
+              key={reference.title}
+              href={reference.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="company-evidence-item"
+            >
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--accent)]">
+                {reference.source}
+              </p>
+              <h3 className="mt-2 text-[17px] leading-6 font-medium text-[var(--text-primary)]">
+                {reference.title}
+              </h3>
+              <p className="mt-2 text-[15px] leading-7 text-[var(--text-secondary)]">{reference.copy}</p>
+              <p className="company-evidence-cta mt-4">
+                {reference.cta} <span aria-hidden="true">↗</span>
+              </p>
+            </a>
+          ))}
+        </div>
       </Container>
     </section>
   );
@@ -113,12 +133,17 @@ export function CompanyToday() {
   const { today } = company;
 
   return (
-    <section id="immunovus-today" className="section scroll-mt-[var(--header-h)]">
+    <section id="immunovus" className="company-beat scroll-mt-[var(--header-h)]">
       <Container>
+        <div className="company-rule" aria-hidden="true" />
         <Reveal>
           <p className="eyebrow">{today.eyebrow}</p>
-          <h2 className="display mt-6 max-w-[16ch]">{today.headline}</h2>
-          <p className="mt-10 max-w-[36rem] text-[18px] leading-8 text-[var(--text-secondary)]">{today.copy}</p>
+          <h2 className="h1 mt-5 max-w-[18ch]">{today.headline}</h2>
+          <div className="mt-8 max-w-[42rem] space-y-5 text-[17px] leading-8 text-[var(--text-secondary)]">
+            {today.copy.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </Reveal>
       </Container>
     </section>

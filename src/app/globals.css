@@ -295,10 +295,60 @@ footer .eyebrow::before {
   padding-block: clamp(3.5rem, 7vw, 6rem);
 }
 
+.company-page,
+.company-story,
+.company-question {
+  background: var(--surface-page);
+  color: var(--text-primary);
+}
+
 .company-question {
   overflow: hidden;
   padding-top: clamp(5.5rem, 13vw, 10rem);
   padding-bottom: clamp(5.75rem, 13vw, 10rem);
+}
+
+.company-question-statement {
+  max-width: 22ch;
+}
+
+.company-beat {
+  position: relative;
+  padding-block: clamp(3.25rem, 6.5vw, 5.5rem);
+}
+
+#the-science.company-beat {
+  padding-top: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.company-rule {
+  width: 2.5rem;
+  height: 1px;
+  margin-bottom: clamp(2.25rem, 4vw, 3.25rem);
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+.company-evidence-item {
+  display: block;
+  padding-block: 1.75rem;
+  border-top: var(--bw-100) solid var(--border-subtle);
+  text-decoration: none;
+  transition: opacity 220ms var(--ease-out);
+}
+
+.company-evidence-item:last-child {
+  padding-bottom: 0;
+}
+
+.company-evidence-cta {
+  font-size: 13px;
+  font-weight: var(--text-w-semibold);
+  color: var(--accent);
+}
+
+.company-evidence-item:hover .company-evidence-cta {
+  color: var(--accent-hover);
 }
 
 .panel {
