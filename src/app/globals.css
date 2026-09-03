@@ -295,6 +295,12 @@ footer .eyebrow::before {
   padding-block: clamp(3.5rem, 7vw, 6rem);
 }
 
+.company-question {
+  overflow: hidden;
+  padding-top: clamp(5.5rem, 13vw, 10rem);
+  padding-bottom: clamp(5.75rem, 13vw, 10rem);
+}
+
 .panel {
   background: color-mix(in srgb, var(--cyan-40) 38%, var(--cyan-10));
   border: var(--bw-100) solid var(--border-subtle);

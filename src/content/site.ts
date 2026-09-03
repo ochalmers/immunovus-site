@@ -39,7 +39,7 @@ export const pages = {
   company: {
     title: "Company",
     description:
-      "The question behind Immunovus became personal. A computational biology company built around understanding the immune system as a connected, dynamic system.",
+      "A personal experience sharpened an existing scientific ambition. Immunovus is built around understanding the immune system as a connected, dynamic system.",
   },
   contact: {
     title: "Talk to us",
@@ -323,20 +323,15 @@ export const foundation = {
 
 export const company = {
   origin: {
-    eyebrow: "The why",
-    headline: "The question behind Immunovus became personal.",
+    eyebrow: "Our origin",
+    headline: "A personal experience sharpened a scientific ambition.",
     copy: [
-      "For Tomáš Helikar, the challenge of understanding the immune system stopped being purely scientific when his eight-year-old son, Liam, became seriously ill.",
-      "Doctors initially feared leukemia. It was ultimately identified as a serious infection, but while the family waited for answers, Tom found himself confronting a problem closely connected to his research: medicine could measure what was happening, but understanding where the immune response was heading was much harder.",
-      "That experience sharpened a question that had been developing throughout his career.",
+      "Tomáš Helikar had spent years using computational models to understand complex biological systems when his eight-year-old son, Liam, became seriously ill.",
+      "Doctors initially feared leukemia. It was ultimately identified as a serious infection, but the uncertainty exposed a fundamental challenge: medicine could measure what was happening, but understanding where his immune response was heading was much harder.",
     ],
-    pullQuote:
-      "What if we could model the immune system well enough to understand not only what is happening now, but what might happen next?",
-    byline: {
-      name: "Tomáš Helikar, Ph.D.",
-      role: "Founder",
-      photo: "/brand/team/tomas-helikar.png",
-    },
+    questionEyebrow: "The question",
+    question:
+      "What if we could understand not only what the immune system is doing now, but what it might do next?",
   },
   science: {
     eyebrow: "The science",

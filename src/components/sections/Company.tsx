@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { NetworkField } from "@/components/visuals/NetworkField";
@@ -8,45 +7,35 @@ export function CompanyOrigin() {
   const { origin } = company;
 
   return (
-    <section id="company" className="section scroll-mt-[var(--header-h)]">
-      <Container>
-        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-20">
+    <>
+      <section id="company" className="section scroll-mt-[var(--header-h)]">
+        <Container>
           <Reveal>
             <p className="eyebrow">{origin.eyebrow}</p>
-            <h2 className="h1 mt-5 max-w-[16ch]">{origin.headline}</h2>
-            <div className="mt-8 max-w-[42rem] space-y-5 text-[17px] leading-7 text-[var(--text-secondary)]">
+            <h1 className="h1 mt-6 max-w-[16ch]">{origin.headline}</h1>
+            <div className="mt-10 max-w-[38rem] space-y-6 text-[17px] leading-8 text-[var(--text-secondary)]">
               {origin.copy.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            <div className="mt-10 flex items-center gap-4">
-              <div className="relative h-14 w-14 overflow-hidden rounded-full border border-[var(--border-subtle)]">
-                <Image
-                  src={origin.byline.photo}
-                  alt={origin.byline.name}
-                  fill
-                  sizes="56px"
-                  className="object-cover object-top grayscale"
-                />
-              </div>
-              <div>
-                <p className="text-[15px] font-medium text-[var(--text-primary)]">{origin.byline.name}</p>
-                <p className="text-[13px] text-[var(--text-muted)]">{origin.byline.role}</p>
-              </div>
-            </div>
           </Reveal>
+        </Container>
+      </section>
 
-          <Reveal delay={120}>
-            <blockquote className="relative isolate overflow-hidden border-l-2 border-[var(--accent)] py-6 pl-6 md:py-10 md:pl-8">
-              <div className="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true">
-                <NetworkField idPrefix="company-origin" className="h-full w-full" />
-              </div>
-              <p className="pull-quote relative text-[var(--text-primary)]">{origin.pullQuote}</p>
-            </blockquote>
-          </Reveal>
+      <section id="the-question" className="company-question section scroll-mt-[var(--header-h)]">
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <div className="absolute inset-y-0 right-[-8%] w-[68%] opacity-[0.22] md:w-[58%]">
+            <NetworkField idPrefix="company-question" className="h-full w-full" />
+          </div>
         </div>
-      </Container>
-    </section>
+        <Container className="relative">
+          <Reveal>
+            <p className="eyebrow">{origin.questionEyebrow}</p>
+            <p className="company-question-statement display mt-8 max-w-[22ch]">{origin.question}</p>
+          </Reveal>
+        </Container>
+      </section>
+    </>
   );
 }
 
