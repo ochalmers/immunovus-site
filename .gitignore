@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /out/
+/portable/
+/Immunovus-website.zip
 
 # production
 /build
