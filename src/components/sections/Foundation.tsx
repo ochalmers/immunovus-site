@@ -4,18 +4,19 @@ import { foundation } from "@/content/site";
 
 export function Foundation() {
   return (
-    <section id="foundation" className="section scroll-mt-[var(--header-h)]">
+    <section id="foundation" className="company-beat scroll-mt-[var(--header-h)]">
       <Container>
+        <div className="company-rule" aria-hidden="true" />
         <Reveal>
           <p className="eyebrow">{foundation.eyebrow}</p>
-          <h2 className="h1 mt-5 max-w-[16ch]">{foundation.headline}</h2>
+          <h2 className="h1 mt-5 max-w-[20ch]">{foundation.headline}</h2>
         </Reveal>
 
-        <div className="mt-20 grid gap-12 border-t border-[var(--border-subtle)] pt-16 md:grid-cols-3 md:gap-16">
+        <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-14">
           {foundation.stats.map((stat, i) => (
             <Reveal key={stat.value} delay={i * 80}>
-              <p className="font-medium tracking-[-0.04em] text-[clamp(1.75rem,3vw,2.5rem)]">{stat.value}</p>
-              <p className="mt-5 max-w-[28ch] text-[16px] leading-7 text-[var(--text-secondary)]">{stat.label}</p>
+              <p className="font-medium tracking-[-0.04em] text-[clamp(1.5rem,2.6vw,2.15rem)]">{stat.value}</p>
+              <p className="mt-4 max-w-[28ch] text-[16px] leading-7 text-[var(--text-secondary)]">{stat.label}</p>
             </Reveal>
           ))}
         </div>

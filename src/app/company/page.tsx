@@ -12,11 +12,15 @@ export const metadata: Metadata = {
 export default function CompanyPage() {
   return (
     <PageFrame>
-      <CompanyOrigin />
-      <CompanyScience />
-      <CompanyDigital />
-      <Foundation />
-      <CompanyToday />
+      <div className="company-page">
+        <CompanyOrigin />
+        <div className="company-story">
+          <CompanyScience />
+          <CompanyDigital />
+          <Foundation />
+          <CompanyToday />
+        </div>
+      </div>
     </PageFrame>
   );
 }

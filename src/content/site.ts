@@ -303,8 +303,8 @@ export const validation = {
 };
 
 export const foundation = {
-  eyebrow: "Our foundation",
-  headline: "Built on years of scientific development.",
+  eyebrow: "The foundation",
+  headline: "Years of research, external support and experimental testing.",
   stats: [
     {
       value: "NIH + NSF",
@@ -350,15 +350,33 @@ export const company = {
     ],
   },
   digital: {
-    eyebrow: "A digital immune system",
-    headline: "From modelling cells to modelling the system.",
-    copy: "The research expanded from individual biological pathways toward increasingly connected models of immune behaviour. The longer-term ambition was to create computational representations capable of combining mechanistic immune biology with individual biological information, providing a more complete way to understand how immune systems behave and respond.",
-    supporting: "This scientific foundation became the basis for Immunovus.",
+    eyebrow: "Building the system",
+    headline: "From modelling cells to modelling the immune system.",
+    copy: "The research expanded from individual biological pathways toward increasingly connected models of immune behaviour. The ambition grew from understanding isolated mechanisms to representing how different parts of the immune system interact as a whole.",
+    references: [
+      {
+        source: "National Institute of General Medical Sciences",
+        title: "Building a Digital Immune System",
+        copy: "A feature exploring Tomáš Helikar's path from computer science into computational biology and his work building mathematical models of the immune system.",
+        href: "https://biobeat.nigms.nih.gov/2023/06/building-a-digital-immune-system/",
+        cta: "Read the article",
+      },
+      {
+        source: "Nokia",
+        title: "Ready to meet your digital immune system?",
+        copy: "A feature exploring the vision for digital immune twins and the personal experience that helped sharpen the ambition behind the work.",
+        href: "https://www.nokia.com/thought-leadership/articles/digital-twin-of-the-human-immune-system/",
+        cta: "Read the article",
+      },
+    ],
   },
   today: {
-    eyebrow: "Immunovus today",
-    headline: "Turning years of research into something people can use.",
-    copy: "Immunovus brings this scientific foundation into a company focused on making immune complexity more predictable. Today, that work is being applied to drug discovery and development, with the potential to support more personalized approaches to medicine and immune health over time.",
+    eyebrow: "Immunovus",
+    headline: "Turning a scientific foundation into something people can use.",
+    copy: [
+      "Immunovus brings this work into a company focused on making immune complexity more predictable.",
+      "Today, that approach is being applied to drug discovery and development, helping teams make decisions with a more complete view of immune biology. Over time, the same foundation could support increasingly personalized approaches to medicine and immune health.",
+    ],
   },
 };
 
