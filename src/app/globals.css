@@ -677,15 +677,19 @@ a:hover .logo-lockup {
 
 .nav-link {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: var(--header-h);
+  line-height: 1;
 }
 
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -7px;
+  right: 0;
+  bottom: 17px;
   height: 1px;
-  width: 100%;
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
@@ -693,13 +697,15 @@ a:hover .logo-lockup {
 }
 
 .nav-link:hover::after,
-.nav-link[aria-current="page"]::after {
+.nav-link[aria-current="page"]::after,
+.nav-group.is-open > .nav-link::after {
   transform: scaleX(1);
 }
 
 .nav-group {
-  padding-bottom: 28px;
-  margin-bottom: -28px;
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
 }
 
 .nav-group.is-open {
@@ -708,7 +714,7 @@ a:hover .logo-lockup {
 
 .nav-menu {
   position: absolute;
-  top: calc(100% - 28px);
+  top: 100%;
   left: 0;
   z-index: 20;
   min-width: 16rem;

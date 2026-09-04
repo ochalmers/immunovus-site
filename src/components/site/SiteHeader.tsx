@@ -111,13 +111,13 @@ export function SiteHeader() {
             return (
               <div
                 key={item.href}
-                className={`nav-group relative ${menu === item.href ? "is-open" : ""}`}
+                className={`nav-group relative mx-3 ${menu === item.href ? "is-open" : ""}`}
                 onMouseEnter={() => openMenu(item.href)}
                 onMouseLeave={closeMenuSoon}
               >
                 <Link
                   href={item.href}
-                  className={`nav-link inline-flex items-center gap-1.5 px-3 py-2 text-[13px] font-medium tracking-[0.04em] transition-colors ${
+                  className={`nav-link gap-1.5 text-[13px] font-medium tracking-[0.04em] transition-colors ${
                     active
                       ? "text-[var(--text-primary)]"
                       : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
