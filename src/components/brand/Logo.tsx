@@ -20,7 +20,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
     <span className="logo-lockup inline-flex">
       <Image
         src="/brand/immunovus-logo.png"
-        alt="ImmuNovus"
+          alt="Immunovus"
         width={170}
         height={36}
         className="h-[30px] w-auto sm:h-[34px]"

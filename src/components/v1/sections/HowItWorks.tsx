@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { howItWorks } from "@/content/site";
+import { howItWorks } from "@/content/v1";
 
 function StageColumn({
   title,

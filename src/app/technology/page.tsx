@@ -1,17 +1,5 @@
-import type { Metadata } from "next";
-import { Technology } from "@/components/sections/Technology";
-import { PageFrame } from "@/components/site/PageFrame";
-import { pages } from "@/content/site";
-
-export const metadata: Metadata = {
-  title: pages.technology.title,
-  description: pages.technology.description,
-};
+import { redirect } from "next/navigation";
 
 export default function TechnologyPage() {
-  return (
-    <PageFrame>
-      <Technology />
-    </PageFrame>
-  );
+  redirect("/discovery");
 }

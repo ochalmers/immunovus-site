@@ -9,7 +9,16 @@ const nextConfig: NextConfig = {
         trailingSlash: true,
         images: { unoptimized: true },
       }
-    : {}),
+    : {
+        async redirects() {
+          return [
+            { source: "/approach", destination: "/discovery", permanent: true },
+            { source: "/technology", destination: "/discovery", permanent: true },
+            { source: "/applications", destination: "/discovery", permanent: true },
+            { source: "/validation", destination: "/discovery/case-studies", permanent: true },
+          ];
+        },
+      }),
 };
 
 export default nextConfig;

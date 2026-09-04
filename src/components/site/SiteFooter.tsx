@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
-import { footer, footerNav } from "@/content/site";
+import { footer, nav } from "@/content/site";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-[var(--border-subtle)] bg-[var(--surface-deep)]">
-      <div className="mx-auto grid w-full max-w-[1180px] gap-10 px-5 py-14 sm:px-6 md:grid-cols-[1.1fr_1fr_0.8fr] md:px-8">
+      <div className="mx-auto grid w-full max-w-[1180px] gap-10 px-5 py-14 sm:px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.2fr_1fr_1fr_0.8fr]">
         <div>
           <Link href="/" aria-label="Immunovus home">
             <Logo />
@@ -13,25 +13,42 @@ export function SiteFooter() {
           <p className="mt-4 max-w-sm text-[var(--text-muted)]">{footer.descriptor}</p>
         </div>
 
-        <nav aria-label="Footer">
-          <p className="eyebrow mb-4">Navigate</p>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
-            {footerNav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {nav.slice(0, 2).map((group) => (
+          <nav key={group.href} aria-label={group.label}>
+            <p className="eyebrow mb-4">{group.label}</p>
+            <ul className="flex flex-col gap-3">
+              {("children" in group ? group.children : [{ href: group.href, label: group.label }]).map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
 
         <div>
           <p className="eyebrow mb-4">Company</p>
           <ul className="flex flex-col gap-3">
+            <li>
+              <Link href="/company" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+                Team
+              </Link>
+            </li>
+            <li>
+              <Link href="/company/careers" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+                Open Positions
+              </Link>
+            </li>
+            <li>
+              <Link href="/individuals" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+                Individuals
+              </Link>
+            </li>
             <li>
               <a
                 href={footer.linkedin}
@@ -43,13 +60,18 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <Link href="/contact" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+              <Link href="/privacy" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
                 Privacy
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+              <Link href="/terms" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
                 Terms
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]">
+                Contact
               </Link>
             </li>
           </ul>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { audiences } from "@/content/site";
+import { audiences } from "@/content/v1";
 
 const labels: Record<(typeof audiences)[number]["id"], string> = {
   discovery: "Drug discovery",

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { challenge } from "@/content/site";
+import { challenge } from "@/content/v1";
 
 function AnimatedValue({
   display,

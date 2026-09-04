@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { approach } from "@/content/site";
+import { approach } from "@/content/v1";
 
 export function Approach() {
   return (

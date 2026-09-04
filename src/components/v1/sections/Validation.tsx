@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { FigurePlaceholder } from "@/components/ui/FigurePlaceholder";
 import { Reveal } from "@/components/ui/Reveal";
-import { validation } from "@/content/site";
+import { validation } from "@/content/v1";
 
 export function Validation() {
   return (

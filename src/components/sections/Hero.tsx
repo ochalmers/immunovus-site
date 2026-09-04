@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { hero } from "@/content/site";
 
 export function Hero() {
@@ -11,8 +12,9 @@ export function Hero() {
       <div className="relative z-10 flex flex-col justify-end bg-[var(--cyan-10)] pl-5 pr-3 pb-14 pt-[calc(var(--header-h)+2.5rem)] sm:pl-8 sm:pr-5 sm:pb-16 md:pl-12 md:pr-8 lg:justify-center lg:pb-20 lg:pt-[var(--header-h)] xl:pl-16 xl:pr-8">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_30%,rgba(117,250,245,0.1),transparent_55%)]" />
         <div className="relative mx-auto w-full max-w-[36rem] lg:mx-0 lg:max-w-[38rem] xl:max-w-[42rem]">
+          <p className="eyebrow reveal">{hero.eyebrow}</p>
           <h1
-            className="reveal font-medium leading-[1.08] tracking-[-0.04em] text-[clamp(2rem,3.4vw,2.95rem)] text-[var(--white)]"
+            className="reveal mt-5 font-medium leading-[1.08] tracking-[-0.04em] text-[clamp(2rem,3.4vw,2.95rem)] text-[var(--white)]"
           >
             {hero.headline}
           </h1>
@@ -23,12 +25,12 @@ export function Hero() {
             className="mt-9 flex flex-col gap-3 sm:flex-row reveal"
             style={{ animationDelay: "360ms" }}
           >
-            <a href={hero.primaryCta.href} className="btn btn-primary">
+            <Link href={hero.primaryCta.href} className="btn btn-primary">
               {hero.primaryCta.label}
-            </a>
-            <a href={hero.secondaryCta.href} className="btn btn-secondary">
+            </Link>
+            <Link href={hero.secondaryCta.href} className="btn btn-secondary">
               {hero.secondaryCta.label}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

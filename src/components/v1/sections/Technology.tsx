@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { NetworkField } from "@/components/visuals/NetworkField";
-import { technology } from "@/content/site";
+import { technology } from "@/content/v1";
 
 export function Technology() {
   return (

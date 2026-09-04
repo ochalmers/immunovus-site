@@ -7,8 +7,15 @@ import { NetworkField } from "@/components/visuals/NetworkField";
 import { pageCta } from "@/content/site";
 
 export function PageCta() {
-  const pathname = usePathname();
-  if (pathname === "/contact") return null;
+  const pathname = usePathname().replace(/\/$/, "") || "/";
+  const hideOn = [
+    "/contact",
+    "/discovery/use",
+    "/discovery/design",
+    "/clinicians/early-access",
+    "/individuals",
+  ];
+  if (hideOn.includes(pathname)) return null;
 
   return (
     <section className="relative isolate overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--cyan-10)]">

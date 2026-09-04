@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { ApplicationsSubnav } from "@/components/sections/ApplicationsSubnav";
+import { ApplicationsSubnav } from "@/components/v1/sections/ApplicationsSubnav";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { applications, audiences } from "@/content/site";
+import { applications, audiences } from "@/content/v1";
 
 function interestHref(interest: string) {
-  return `/contact?interest=${encodeURIComponent(interest)}`;
+  return `/v1/contact?interest=${encodeURIComponent(interest)}`;
 }
 
 export function Applications() {

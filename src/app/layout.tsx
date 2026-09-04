@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { SiteFooter } from "@/components/site/SiteFooter";
-import { SiteHeader } from "@/components/site/SiteHeader";
-import { PageCta } from "@/components/site/PageCta";
+import { SiteChrome } from "@/components/site/SiteChrome";
 import { pages } from "@/content/site";
 import "./globals.css";
 
@@ -40,10 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <div className="site-grain" aria-hidden="true" />
-        <SiteHeader />
-        <main id="main">{children}</main>
-        <PageCta />
-        <SiteFooter />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

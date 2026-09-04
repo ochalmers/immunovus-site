@@ -12,7 +12,7 @@ export function CompanyOrigin() {
         <Container>
           <Reveal>
             <p className="eyebrow">{origin.eyebrow}</p>
-            <h1 className="h1 mt-6 max-w-[16ch]">{origin.headline}</h1>
+            <h2 className="h1 mt-6 max-w-[16ch]">{origin.headline}</h2>
             <div className="mt-10 max-w-[38rem] space-y-6 text-[17px] leading-8 text-[var(--text-secondary)]">
               {origin.copy.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
